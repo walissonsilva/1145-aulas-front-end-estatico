@@ -1,0 +1,79 @@
+/* Cor primária: azul (#005CA9) */
+/* Cor secondária: ocre (#d87b00) */
+
+:root {
+    /* font-size: 12px; */
+    --primary-color: #005CA9;
+    --secondary-color: #F39200;
+    --rounded: 50%;
+}
+
+body {
+    background-color: #222222;
+    color: white;
+}
+
+/* ===== SECTION BANNER ===== */
+
+#banner h1.title {}
+
+#banner hgroup>h1.title {}
+
+#banner hgroup>h2.subtitle {}
+
+#banner hgroup>h2.subtitle:hover {}
+
+hgroup :not(:nth-child(-n+2)) {
+    color: red;
+}
+
+.title,
+.subtitle {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+#banner figure img {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--rounded);
+}
+
+/* ####### SECTION DISPLAYS #######  */
+
+/* Flexbox */
+
+#displays {
+    margin-top: 4rem;
+}
+
+#displays .container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#displays>.container>.caixa1 {
+    /* width: 200px; */
+    flex-grow: 1;
+    height: 200px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    color: black;
+    font-size: 1.7rem;
+    min-width: 350px;
+}
+
+#displays>.container>.caixa2 {
+    /* width: 200px; */
+    flex-grow: 1;
+    min-width: 350px;
+    height: 100px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    color: black;
+    font-size: 1.7rem;
+}
