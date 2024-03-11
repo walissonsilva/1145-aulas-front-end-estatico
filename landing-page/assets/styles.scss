@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body,
+button,
+input,
+option {
+    font-family: "Mulish", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+// Header
+
+// Navbar
+#nav {
+    box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.4);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    &__brand {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: black;
+    }
+
+    &__list {
+        list-style: none;
+
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    &__item {
+        a {
+            font-size: 1.125rem;
+            color: #1F1534;
+            font-weight: 400;
+        }
+
+        &--active a {
+            font-size: 1.125rem;
+            color: #1F1534;
+            font-weight: 700;
+        }
+    }
+}
+
+// Header > Banner
+
+#banner {
+    display: flex;
+    max-width: 1240px;
+    margin: 4rem auto 0;
+}
+
+.banner-left {
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        font-size: 21px;
+        font-weight: 300;
+        color: #7D7987;
+    }
+}
+
+// Button
+.button {
+    background-color: #458FF6;
+    color: #ffffff;
+    height: 60px;
+    width: 200px;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 55px;
+    font-size: 18px;
+    font-weight: 700;
+}
