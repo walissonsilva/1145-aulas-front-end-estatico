@@ -1,4 +1,5 @@
 $medium-screen-breakpoint: 768px;
+$text-muted: #7D7987;
 
 :root {
     --primary-color: #458FF6;
@@ -13,6 +14,10 @@ $medium-screen-breakpoint: 768px;
 
 a {
     text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -89,6 +94,7 @@ button {
 
     max-width: 1240px;
     margin: 4rem auto 0;
+    padding: 0 2rem;
 
     @media (max-width: $medium-screen-breakpoint) {
         flex-direction: column;
@@ -96,7 +102,7 @@ button {
 }
 
 .banner-left {
-    flex-grow: 1;
+    flex: 1;
 
     &__hgroup {
         max-width: 445px;
@@ -117,7 +123,7 @@ button {
 }
 
 .banner-right {
-    flex-grow: 1;
+    flex: 1;
 
     display: flex;
     justify-content: flex-end;
@@ -147,5 +153,90 @@ button {
         transform: translateY(-2px);
 
         transition: filter 0.2s, transform 0.2s;
+    }
+}
+
+// ####### SERVICES #######
+
+#services {
+    background-image: linear-gradient(to bottom, #5A98F2, #67C3F3);
+    margin-top: 140px;
+    padding: 4rem 2rem;
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+
+        max-width: 1184px;
+        margin: 4rem auto 0;
+
+        .service-card {
+            height: 350px;
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+
+            &__image {
+                height: 90px;
+                margin-bottom: 1.75rem;
+            }
+
+            &__title {
+                font-size: 1.5rem;
+                color: black;
+                margin-bottom: 1rem;
+            }
+
+            &__description {
+                font-size: 16px;
+                font-weight: 100;
+                color: $text-muted;
+            }
+
+            &:focus {
+                border: 1px solid red;
+            }
+        }
+
+        @media (max-width: 400px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.section-header {
+    max-width: 952px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    &__title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 1.75rem;
+        color: white;
+    }
+
+    &__divider {
+        border: 1px solid var(--white);
+        width: 56px;
+    }
+
+    &__description {
+        margin-top: 2rem;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 100;
     }
 }

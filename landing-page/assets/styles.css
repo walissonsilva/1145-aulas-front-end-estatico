@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffffff;
   color: #000000;
@@ -74,6 +78,7 @@ button {
   gap: 2rem;
   max-width: 1240px;
   margin: 4rem auto 0;
+  padding: 0 2rem;
 }
 @media (max-width: 768px) {
   #banner {
@@ -82,7 +87,7 @@ button {
 }
 
 .banner-left {
-  flex-grow: 1;
+  flex: 1;
 }
 .banner-left__hgroup {
   max-width: 445px;
@@ -100,7 +105,7 @@ button {
 }
 
 .banner-right {
-  flex-grow: 1;
+  flex: 1;
   display: flex;
   justify-content: flex-end;
 }
@@ -125,4 +130,74 @@ button {
   filter: brightness(1.2);
   transform: translateY(-2px);
   transition: filter 0.2s, transform 0.2s;
+}
+
+#services {
+  background-image: linear-gradient(to bottom, #5A98F2, #67C3F3);
+  margin-top: 140px;
+  padding: 4rem 2rem;
+}
+#services .services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1184px;
+  margin: 4rem auto 0;
+}
+#services .services-container .service-card {
+  height: 350px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#services .services-container .service-card__image {
+  height: 90px;
+  margin-bottom: 1.75rem;
+}
+#services .services-container .service-card__title {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+#services .services-container .service-card__description {
+  font-size: 16px;
+  font-weight: 100;
+  color: #7D7987;
+}
+#services .services-container .service-card:focus {
+  border: 1px solid red;
+}
+@media (max-width: 400px) {
+  #services .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-header {
+  max-width: 952px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.section-header__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  color: white;
+}
+.section-header__divider {
+  border: 1px solid var(--white);
+  width: 56px;
+}
+.section-header__description {
+  margin-top: 2rem;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 100;
 }/*# sourceMappingURL=styles.css.map */
